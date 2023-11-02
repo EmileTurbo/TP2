@@ -21,6 +21,7 @@ public class KeyCollider : MonoBehaviour
             if(isKey == true)
             {
                 porte.SetActive(false);
+                keyOnPlayer.SetActive(false);
             }
         }
     }

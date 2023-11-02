@@ -7,6 +7,8 @@ TagManager:
   - Fire
   - Key
   - porte
+  - enemy
+  - GameOver
   layers:
   - Default
   - TransparentFX

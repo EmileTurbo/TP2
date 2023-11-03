@@ -1,46 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Decompte : MonoBehaviour
+public class EnemyCollider : MonoBehaviour
 {
-    float currentTime = 0f;
-    public float startingTime = 60f;
-    public TextMeshProUGUI countdownText;
+    public GameObject explosion;
     public TextMeshProUGUI gameOverText;
     public GameObject Player;
+    public GameObject Decompte;
     
 
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        currentTime = startingTime;
+        if (other.gameObject.tag == "enemy")
+        {
+            Instantiate(explosion, this.transform.position, Quaternion.identity);
+            Destroy(other.gameObject);
+            Decompte.SetActive(false);
+            StartCoroutine(GameOver());
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        currentTime -= 1 * Time.deltaTime;
-        countdownText.text = currentTime.ToString("0");
-
-        if (currentTime <= 0 )
-        {
-            StartCoroutine(GameOver());
-        }
-
+        
     }
 
     IEnumerator GameOver()
     {
-        currentTime = 0;
         gameOverText.text = "Game Over";
-
-        Player.SetActive(false);
-
+        this.GetComponent<PlayerMouvement>().enabled = false;
         yield return new WaitForSeconds(3f);
+
         Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("SceneMenu"); // Charge la scène SceneMenu
     }

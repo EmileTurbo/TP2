@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 71125449}
   - component: {fileID: 71125448}
   - component: {fileID: 71125447}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pont (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -317,7 +317,7 @@ GameObject:
   - component: {fileID: 521099643}
   - component: {fileID: 521099642}
   - component: {fileID: 521099641}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pont (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -547,6 +547,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water4Advanced
       objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: b544816461f324e56a39767fdeb5b114, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 24.87
+      objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: b544816461f324e56a39767fdeb5b114, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.4309902
@@ -612,7 +616,7 @@ GameObject:
   - component: {fileID: 930915592}
   - component: {fileID: 930915591}
   - component: {fileID: 930915590}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pont
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -782,8 +786,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 986154473}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.35784352, y: 0.0050717713, z: 0.0019708343, w: 0.93376577}
-  m_LocalPosition: {x: 91.2491, y: -51.18747, z: 43.020157}
+  m_LocalRotation: {x: 0.09136737, y: 0.8620665, z: 0.16787387, w: -0.46937376}
+  m_LocalPosition: {x: 97.417366, y: -4.4513607, z: 130.77089}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1059,7 +1063,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 7
   groundDrag: 5
-  playerHeight: 2
+  airMultiplier: 0.4
+  playerHeight: 3
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1024

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class KeyCollider : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class KeyCollider : MonoBehaviour
             {
                 porte.SetActive(false);
                 keyOnPlayer.SetActive(false);
+                SceneManager.LoadScene("SceneReserve"); // Charge la scène SceneReserve
             }
         }
     }

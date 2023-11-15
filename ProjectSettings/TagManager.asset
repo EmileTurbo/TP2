@@ -9,6 +9,8 @@ TagManager:
   - porte
   - enemy
   - GameOver
+  - nefaste
+  - point
   layers:
   - Default
   - TransparentFX

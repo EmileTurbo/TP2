@@ -35,7 +35,7 @@ public class EnemyCollider : MonoBehaviour
         gameOverText.text = "Game Over";
         this.GetComponent<PlayerMouvement>().enabled = false;
         yield return new WaitForSeconds(3f);
-
+        Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("SceneMenu"); // Charge la scène SceneMenu
     }

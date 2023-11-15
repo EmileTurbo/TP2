@@ -41,6 +41,7 @@ public class Decompte : MonoBehaviour
         Player.SetActive(false);
 
         yield return new WaitForSeconds(3f);
+        Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("SceneMenu"); // Charge la scène SceneMenu
     }
